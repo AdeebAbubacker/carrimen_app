@@ -1,6 +1,6 @@
-import 'package:coinswitch_crypto/ui/enter_otp_screen_1.dart';
-import 'package:coinswitch_crypto/ui/enter_otp_screen_2.dart';
-import 'package:coinswitch_crypto/ui/verify_your_account_screen.dart';
+import 'package:carryman_app/ui/enter_otp_screen_1.dart';
+import 'package:carryman_app/ui/enter_otp_screen_2.dart';
+import 'package:carryman_app/ui/verify_your_account_screen.dart';
 import 'package:flutter/material.dart';
 
 void main() {

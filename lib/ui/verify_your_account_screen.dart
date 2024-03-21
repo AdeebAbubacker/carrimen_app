@@ -1,9 +1,9 @@
-import 'package:coinswitch_crypto/theme/axiforma_theme.dart';
-import 'package:coinswitch_crypto/widget/cancel_button.dart';
+import 'package:carryman_app/theme/axiforma_theme.dart';
+import 'package:carryman_app/widget/cancel_button.dart';
 import 'package:flutter/material.dart';
 
-import 'package:coinswitch_crypto/ui/sample_screen.dart';
-import 'package:coinswitch_crypto/widget/signup_button.dart';
+import 'package:carryman_app/ui/sample_screen.dart';
+import 'package:carryman_app/widget/signup_button.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 

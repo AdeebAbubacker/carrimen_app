@@ -1,5 +1,7 @@
+import 'package:carryman_app/ui/carrimen_home.dart';
 import 'package:carryman_app/ui/enter_otp_screen_1.dart';
 import 'package:carryman_app/ui/enter_otp_screen_2.dart';
+import 'package:carryman_app/ui/enter_otp_screen_3.dart';
 import 'package:carryman_app/ui/verify_your_account_screen.dart';
 import 'package:flutter/material.dart';
 
@@ -20,7 +22,8 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: false,
       ),
-      home: EnterOtpScreen2(),
+      //home: EnterOtpScreen3(),
+      home:  CarrimenHome(),
       //home: FontTesting(),
     );
   }

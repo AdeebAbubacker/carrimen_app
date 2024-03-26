@@ -1,3 +1,5 @@
+import 'package:carryman_app/core/constant/colors.dart';
+import 'package:carryman_app/core/constant/text_styles.dart';
 import 'package:flutter/material.dart';
 
 class CancelButton extends StatelessWidget {
@@ -8,8 +10,8 @@ class CancelButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      width: 290,
-      height: 50,
+      width: 335,
+      height: 56,
       child: OutlinedButton(
         style: ButtonStyle(
           backgroundColor: MaterialStateProperty.all(
@@ -19,19 +21,15 @@ class CancelButton extends StatelessWidget {
               borderRadius: BorderRadius.circular(9.0),
               side: const BorderSide(
                 width: 2.0, // Border width
-                color: const Color(0xFFC83E96),
+                color: AppConstants.primaryColor,
               ),
             ),
           ),
         ),
         onPressed: () {},
-        child: const Text(
+        child: Text(
           'Cancel',
-          style: TextStyle(
-            color: const Color(0xFFC83E96),
-            fontSize: 14.0,
-            fontWeight: FontWeight.w700,
-          ),
+          style: TextStyles.axiforma16PinksemiBold,
         ),
       ),
     );

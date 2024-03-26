@@ -1,11 +1,10 @@
-import 'package:carryman_app/theme/axiforma_theme.dart';
+import 'package:carryman_app/core/constant/text_styles.dart';
 import 'package:carryman_app/ui/sample_screen.dart';
 import 'package:carryman_app/widget/signup_button.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class SignupScreen extends StatelessWidget {
-  final CustomTextStyle customTextStyle = CustomTextStyle();
   SignupScreen({super.key});
 
   @override
@@ -23,22 +22,11 @@ class SignupScreen extends StatelessWidget {
               const SizedBox(height: 20),
               Text(
                 'Create an Account',
-                style: customTextStyle.axiformaTextStyle(
-                  fontSize: 24,
-                  color: const Color(0xFF242424),
-                  fontWeight: FontWeight.bold,
-                ),
+                style: TextStyles.axiforma24CharcoalGreyBold,
               ),
               SizedBox(height: height * 0.009),
               // const SizedBox(height: 10.0),
-              Text(
-                'Sign up to join',
-                style: customTextStyle.axiformaTextStyle(
-                  fontSize: 16,
-                  color: const Color(0xFF777777),
-                  fontWeight: FontWeight.w500,
-                ),
-              ),
+              Text('Sign up to join', style: TextStyles.axiforma16GreyW500),
               const SizedBox(height: 20.0),
               Padding(
                 padding: const EdgeInsets.only(
@@ -68,17 +56,17 @@ class SignupScreen extends StatelessWidget {
                             children: [
                               TextSpan(
                                 text: 'I agree to the ',
-                                style: GoogleFonts.montserrat(
-                                    fontSize: 14.0, color: Colors.grey),
+                                style: TextStyles.axiforma14Grey666med,
                               ),
                               TextSpan(
                                 text: 'Terms of Service',
-                                style: GoogleFonts.montserrat(
-                                  fontSize: 14.0,
-                                  fontWeight: FontWeight.w500,
-                                  color: Color.fromARGB(255, 81, 125, 132),
-                                  decoration: TextDecoration.underline,
-                                ),
+                                style: TextStyles.axiforma14Black3Bmed,
+                                // style: GoogleFonts.montserrat(
+                                //   fontSize: 14.0,
+                                //   fontWeight: FontWeight.w500,
+                                //   color: Color.fromARGB(255, 81, 125, 132),
+                                //   decoration: TextDecoration.underline,
+                                // ),
                               ),
                             ],
                           ),
@@ -96,16 +84,11 @@ class SignupScreen extends StatelessWidget {
                   children: [
                     TextSpan(
                       text: 'Have an account? ',
-                      style: GoogleFonts.montserrat(
-                          fontSize: 14.0, color: Colors.grey),
+                      style: TextStyles.axiforma16Grey666med,
                     ),
                     TextSpan(
                       text: 'Sign in',
-                      style: GoogleFonts.montserrat(
-                        fontSize: 14.0,
-                        fontWeight: FontWeight.w500,
-                        color: const Color.fromARGB(255, 33, 70, 75),
-                      ),
+                      style: TextStyles.axiforma16Black3Bmed,
                     ),
                   ],
                 ),

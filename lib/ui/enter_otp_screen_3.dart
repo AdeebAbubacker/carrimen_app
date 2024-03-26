@@ -1,10 +1,8 @@
-import 'package:carryman_app/theme/axiforma_theme.dart';
-import 'package:carryman_app/widget/cancel_button.dart';
+import 'package:carryman_app/core/constant/text_styles.dart';
 import 'package:carryman_app/widget/signup_button.dart';
 import 'package:flutter/material.dart';
 
 class EnterOtpScreen3 extends StatelessWidget {
-  final CustomTextStyle customTextStyle = CustomTextStyle();
   EnterOtpScreen3({Key? key}) : super(key: key);
 
   @override
@@ -26,11 +24,7 @@ class EnterOtpScreen3 extends StatelessWidget {
               child: Text(
                 'Where do you want your service?',
                 textAlign: TextAlign.center,
-                style: customTextStyle.axiformaTextStyle(
-                  fontSize: 24,
-                  color: const Color(0xFF242424),
-                  fontWeight: FontWeight.bold,
-                ),
+                style: TextStyles.axiforma24CharcoalGreyBold,
               ),
             ),
             SizedBox(height: height * 0.1),
@@ -40,11 +34,7 @@ class EnterOtpScreen3 extends StatelessWidget {
                 onPressed: () {},
                 child: Text(
                   'I’ll enter my location manually',
-                  style: customTextStyle.axiformaTextStyle(
-                    fontSize: 16,
-                    color: const Color(0xFFC83E96),
-                    fontWeight: FontWeight.w400,
-                  ),
+                  style: TextStyles.axiforma16Pinkw400,
                 ))
           ],
         ),

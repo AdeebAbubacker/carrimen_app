@@ -1,10 +1,8 @@
-import 'package:carryman_app/theme/axiforma_theme.dart';
-import 'package:carryman_app/widget/cancel_button.dart';
+import 'package:carryman_app/core/constant/text_styles.dart';
 import 'package:carryman_app/widget/signup_button.dart';
 import 'package:flutter/material.dart';
 
 class EnterOtpScreen2 extends StatelessWidget {
-  final CustomTextStyle customTextStyle = CustomTextStyle();
   EnterOtpScreen2({Key? key}) : super(key: key);
 
   @override
@@ -22,25 +20,15 @@ class EnterOtpScreen2 extends StatelessWidget {
             SizedBox(height: height * 0.039),
             Image.asset('assets/fi_8358886.png'),
             Center(
-              child: Text(
-                'Account Created Successfully',
-                textAlign: TextAlign.center,
-                style: customTextStyle.axiformaTextStyle(
-                  fontSize: 24,
-                  color: const Color(0xFF242424),
-                  fontWeight: FontWeight.bold,
-                ),
-              ),
+              child: Text('Account Created Successfully',
+                  textAlign: TextAlign.center,
+                  style: TextStyles.axiforma24CharcoalGreyBold),
             ),
             Center(
               child: Text(
                 'Your account created successfully',
                 textAlign: TextAlign.center,
-                style: customTextStyle.axiformaTextStyle(
-                  fontSize: 16,
-                  color: const Color(0xFF777777),
-                  fontWeight: FontWeight.w500,
-                ),
+                style: TextStyles.axiforma16GreyW500,
               ),
             ),
             SizedBox(height: height * 0.1),

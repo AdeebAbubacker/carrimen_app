@@ -1,3 +1,5 @@
+import 'package:carryman_app/core/constant/colors.dart';
+import 'package:carryman_app/core/constant/text_styles.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -13,7 +15,7 @@ class ButtonOne extends StatelessWidget {
         child: ElevatedButton(
             style: ButtonStyle(
               backgroundColor: MaterialStateProperty.all(
-                const Color(0xFFC83E96),
+                AppConstants.primaryColor,
               ),
               shape: MaterialStateProperty.all<RoundedRectangleBorder>(
                 RoundedRectangleBorder(
@@ -24,11 +26,7 @@ class ButtonOne extends StatelessWidget {
             onPressed: () {},
             child: Text(
               content,
-              style: GoogleFonts.montserrat(
-                fontSize: 14.0,
-                color: const Color.fromARGB(255, 247, 247, 247),
-                fontWeight: FontWeight.w700,
-              ),
+              style: TextStyles.axiforma16WhitesemiBold,
             )));
   }
 }

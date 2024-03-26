@@ -1,10 +1,9 @@
-import 'package:carryman_app/theme/axiforma_theme.dart';
+import 'package:carryman_app/core/constant/text_styles.dart';
 import 'package:carryman_app/widget/cancel_button.dart';
 import 'package:carryman_app/widget/signup_button.dart';
 import 'package:flutter/material.dart';
 
 class EnterOtpScreen1 extends StatelessWidget {
-  final CustomTextStyle customTextStyle = CustomTextStyle();
   EnterOtpScreen1({Key? key}) : super(key: key);
 
   @override
@@ -21,21 +20,15 @@ class EnterOtpScreen1 extends StatelessWidget {
           SizedBox(height: height * 0.03),
           Text(
             'Enter OTP',
-            style: customTextStyle.axiformaTextStyle(
-              fontSize: 20,
-              color: const Color(0xFF242424),
-              fontWeight: FontWeight.bold,
-            ),
+            style: TextStyles.axiforma20CharcoalGreyBold,
+          
           ),
           Center(
             child: Text(
               'A verification codes has been sent to (219)555-0114',
               textAlign: TextAlign.center,
-              style: customTextStyle.axiformaTextStyle(
-                fontSize: 16,
-                color: const Color(0xFF777777),
-                fontWeight: FontWeight.w500,
-              ),
+              style: TextStyles.axiforma16GreyW500,
+  
             ),
           ),
           const SizedBox(height: 60),
@@ -58,78 +51,21 @@ class EnterOtpScreen1 extends StatelessWidget {
   }
 }
 
-// class EnterOtpScreen1 extends StatelessWidget {
-//   final CustomTextStyle customTextStyle = CustomTextStyle();
-//   EnterOtpScreen1({super.key});
-
-//   @override
-//   Widget build(BuildContext context) {
-//     final height = MediaQuery.of(context).size.height;
-//     return Scaffold(
-//       resizeToAvoidBottomInset: true,
-//       body: SingleChildScrollView(
-//         child: Center(
-//           child: Column(
-//             crossAxisAlignment: CrossAxisAlignment.center,
-//             mainAxisAlignment: MainAxisAlignment.center,
-//             children: [
-//               SizedBox(height: height * 0.1),
-//               Image.asset('assets/logo_1.png'),
-//               SizedBox(height: height * 0.03),
-//               Text(
-//                 'Enter OTP',
-//                 style: customTextStyle.axiformaTextStyle(
-//                   fontSize: 20,
-//                   color: const Color(0xFF242424),
-//                   fontWeight: FontWeight.bold,
-//                 ),
-//               ),
-//               Center(
-//                 child: Text(
-//                   'A verification codes has been sent to (219)555-0114',
-//                   textAlign: TextAlign.center,
-//                   style: customTextStyle.axiformaTextStyle(
-//                     fontSize: 16,
-//                     color: const Color(0xFF777777),
-//                     fontWeight: FontWeight.w500,
-//                   ),
-//                 ),
-//               ),
-//               const SizedBox(height: 60),
-//               Row(
-//                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-//                 children: [
-//                   OTPTextField(),
-//                   OTPTextField(),
-//                   OTPTextField(),
-//                   OTPTextField(),
-//                 ],
-//               ),
-//               const SizedBox(height: 90),
-//               const SignupButton(),
-//               SizedBox(height: height * 0.02),
-//               const CancelButton()
-//             ],
-//           ),
-//         ),
-//       ),
-//     );
-//   }
-// }
 
 class OTPTextField extends StatelessWidget {
   const OTPTextField({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return const SizedBox(
+    return SizedBox(
       width: 69,
       height: 60,
       child: TextField(
+        style: TextStyles.axiforma20Black24Bold,
         textAlign: TextAlign.center,
         keyboardType: TextInputType.number,
         maxLength: 1,
-        decoration: InputDecoration(
+        decoration: const InputDecoration(
           // enabledBorder: UnderlineInputBorder(
           //   borderSide: BorderSide,
           // ),

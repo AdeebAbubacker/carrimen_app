@@ -1,25 +1,26 @@
-import 'package:carryman_app/ui/carrimen_home.dart';
-import 'package:carryman_app/ui/enter_otp_screen_1.dart';
+import 'package:carrimen_app/core/routes/app_route_confg.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 
-void main() {
-  runApp(const MyApp());
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+
+  // Lock in portrait mode
+  SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp])
+      .then((_) {
+    runApp(const MyApp());
+  });
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+  const MyApp({Key? key}) : super(key: key);
 
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return MaterialApp.router(
       debugShowCheckedModeBanner: false,
-      title: 'Flutter Demo',
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-        useMaterial3: false,
-      ),
-      home: CarrimenHome(),
+      theme: ThemeData(useMaterial3: false),
+       routerConfig: MyappRoutes.routes,
     );
   }
 }
